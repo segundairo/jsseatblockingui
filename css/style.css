@@ -89,7 +89,6 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #ddd;
   background: linear-gradient(75deg, #ccc, #f3f3f3);
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -154,6 +153,43 @@ ul {
 
 .container .seats__container .seat + .seat {
   margin-top: 1.5rem;
+}
+
+.container .legend ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .legend ul li > div {
+  height: 30px;
+  width: 30px;
+}
+
+.container .legend ul li:nth-child(1) > div {
+  background: linear-gradient(75deg, #18646e, rgba(16, 71, 153, 0.842));
+}
+
+.container .legend ul li:nth-child(2) > div {
+  background: linear-gradient(75deg, #857f7f, #f3f3f3);
+}
+
+.container .legend ul li:nth-child(3) > div {
+  background: linear-gradient(75deg, #f10b0b, #c40e0e);
+}
+
+.container .legend ul li:nth-child(4) > div {
+  background: linear-gradient(75deg, #166e16, rgba(40, 180, 40, 0.842));
 }
 
 .container .seat__map {

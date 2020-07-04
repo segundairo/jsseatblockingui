@@ -4,6 +4,15 @@ let standard;
 let premium;
 let selected;
 
+function showUI() {
+  const blockedSeats = JSON.parse(localStorage.getItem("selectedSeats"))
+  if (blockedSeats !== null && blockedSeats.length > 0) {
+    blockedSeats.forEach((seat) => {
+      seats[seat].classList.add('blocked')    
+   })  
+  }
+}
+
 function showSeatStat() {
   // const blocked = document.querySelectorAll('.seats__container > div > *:not(.blocked)')
   // const blocked = document.querySelectorAll('.seats__container > div:not(:first-of-type) > *:not(.blocked)')
@@ -21,21 +30,24 @@ function showSeatStat() {
 
 function showSelectedSeats() {
   const seatOutput = document.querySelector("#seat__no ");
-  let seatNo = [];
-  const seatNumbers = Array.from(selected).map((el) => {
-    const seatAlpha = el.innerText;
+  
+  const seatIndex = [...selected].map((seat) => [...seats].indexOf(seat))
+  const seatNumbers = [...selected].map((seat) => {
+    const seatAlpha = seat.innerText;
     const seatCol = document.querySelectorAll(
-      `.${seatAlpha.toLowerCase()} > *`
-    );
-    const row = Array.from(seatCol).indexOf(el) + 1;
-    seatNo.push(`${seatAlpha}${row}`);
-    console.log(seatNo);
-
-    return Array.from(seats).indexOf(el);
-  });
-  seatOutput.innerHTML = `<p class='seat__no'>${seatNo.join(", ")}</p>`;
-  console.log(seatNumbers);
+      `.${seatAlpha.toLowerCase()} > *`)
+    const row = [...seatCol].indexOf(seat) + 1;
+    return `${seatAlpha}${row}`;
+ 
+});
+    
+   console.log(seatIndex);
+   
+  localStorage.setItem("selectedSeats", JSON.stringify(seatIndex))
+  
+  seatOutput.innerHTML = `<p class='seat__no'>${seatNumbers.join(", ")}</p>`;
 }
+
 
 container.addEventListener("click", (e) => {
   const item = e.target;
@@ -43,6 +55,8 @@ container.addEventListener("click", (e) => {
   if (item.classList.contains("seat")) {
     item.classList.toggle("selected");
     showSeatStat();
-    showSelectedSeats();
+    showSelectedSeats();       
   }
 });
+
+showUI()

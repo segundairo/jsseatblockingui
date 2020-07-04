@@ -28,11 +28,11 @@
             <span class="row__no">11</span>
          </div>
          <div class="a">
+            <div class="seat premium">A</div>
             <div class="seat">A</div>
+            <div class="seat premium">A</div>
             <div class="seat">A</div>
-            <div class="seat selected">A</div>
-            <div class="seat">A</div>
-            <div class="seat blocked ">A</div>
+            <div class="seat premium ">A</div>
             <div class="seat">A</div>
             <div class="seat">A</div>
             <div class="seat">A</div>
@@ -41,23 +41,23 @@
             <div class="seat">A</div>
          </div>
          <div class="b">
-            <div class="seat">B</div>
-            <div class="seat">B</div>
-            <div class="seat premium selected">B</div>
-            <div class="seat">B</div>
+            <div class="seat premium">B</div>
             <div class="seat">B</div>
             <div class="seat">B</div>
             <div class="seat">B</div>
             <div class="seat">B</div>
-            <div class="seat blocked">B</div>
+            <div class="seat">B</div>
+            <div class="seat">B</div>
+            <div class="seat">B</div>
+            <div class="seat ">B</div>
             <div class="seat">B</div>
             <div class="seat">B</div>
          </div>
          <div class="c">
+            <div class="seat premium">C</div>
             <div class="seat">C</div>
             <div class="seat">C</div>
             <div class="seat">C</div>
-            <div class="seat premium blocked">C</div>
             <div class="seat">C</div>
             <div class="seat">C</div>
             <div class="seat">C</div>
@@ -67,7 +67,7 @@
             <div class="seat">C</div>
          </div>
          <div class="d">
-            <div class="seat">D</div>
+            <div class="seat premium">D</div>
             <div class="seat">D</div>
             <div class="seat">D</div>
             <div class="seat">D</div>
@@ -80,7 +80,7 @@
             <div class="seat">D</div>
          </div>
          <div class="e">
-            <div class="seat">E</div>
+            <div class="seat premium">E</div>
             <div class="seat">E</div>
             <div class="seat">E</div>
             <div class="seat">E</div>
@@ -93,6 +93,7 @@
             <div class="seat">E</div>
          </div>
          <div class="f">
+            <div class="seat premium">F</div>
             <div class="seat">F</div>
             <div class="seat">F</div>
             <div class="seat">F</div>
@@ -103,27 +104,46 @@
             <div class="seat">F</div>
             <div class="seat">F</div>
             <div class="seat">F</div>
-            <div class="seat">F</div>
+         </div>
+         <div class="legend">
+            <ul>
+               <li> Premium<div></div>
+               </li>
+               <li> standard<div></div>
+               </li>
+               <li>blocked <div></div>
+               </li>
+               <li>selected <div></div>
+               </li>
+            </ul>
          </div>
       </div>
       <div class="cart">
          <h3>Selected seats</h3>
          <div>
-                  <ul>
-            <li><h4>Premium seat(s)</h4></li>
-            <li> <h4>Standard seat(s)</h4></li>
-            <li>  <h4 class="total">Total seat(s)</h4></li>
-         </ul>
-         <ul>
-            <li> <span id="premium">0</span></li>
-            <li> <span id="standard">0</span></li>
-            <li> <div class="total"><span id="total">0</span></div></li>
-         </ul>   
+            <ul>
+               <li>
+                  <h4>Premium seat(s)</h4>
+               </li>
+               <li>
+                  <h4>Standard seat(s)</h4>
+               </li>
+               <li>
+                  <h4 class="total">Total seat(s)</h4>
+               </li>
+            </ul>
+            <ul>
+               <li> <span id="premium">0</span></li>
+               <li> <span id="standard">0</span></li>
+               <li>
+                  <div class="total"><span id="total">0</span></div>
+               </li>
+            </ul>
          </div>
 
          <div>
             <h4>Seat Numbers:</h4>
-            <div id="seat__no">                 
+            <div id="seat__no">
             </div>
          </div>
       </div>
