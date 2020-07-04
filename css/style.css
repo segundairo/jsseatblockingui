@@ -1,0 +1,238 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1.7;
+  font-family: "Muli", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 960px;
+  width: 80%;
+  margin: auto;
+}
+
+.container h3 {
+  text-align: center;
+  margin-bottom: 0.4rem;
+  margin-left: 2rem;
+}
+
+.container .seats__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .seats__container > div:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.container .seats__container > div:nth-child(4) {
+  margin-right: 3rem;
+}
+
+.container .seats__container .row__no,
+.container .seats__container .seat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 35px;
+  width: 35px;
+}
+
+.container .seats__container .row__no + .row__no {
+  margin-top: 1.5rem;
+}
+
+.container .seats__container .seat {
+  -webkit-box-shadow: 0 0 0 9px #ccc, 0 12px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0 9px #ccc, 0 12px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ddd;
+  background: linear-gradient(75deg, #ccc, #f3f3f3);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.container .seats__container .seat:hover {
+  -webkit-box-shadow: 0 0 0 9px #ccc, 0 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 9px #ccc, 0 1px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(75deg, #8b8888, #f3f3f3);
+}
+
+.container .seats__container .seat.selected {
+  background: linear-gradient(75deg, #166e16, rgba(40, 180, 40, 0.842));
+  -webkit-box-shadow: 0 0 0 9px #379e62, 0 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 9px #379e62, 0 1px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  color: #f3f3f3;
+}
+
+.container .seats__container .seat.premium {
+  background: linear-gradient(75deg, #18646e, rgba(16, 71, 153, 0.842));
+  -webkit-box-shadow: 0 0 0 9px rgba(16, 71, 153, 0.842), 0 7px 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 0 9px rgba(16, 71, 153, 0.842), 0 7px 20px rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+  color: #f3f3f3;
+}
+
+.container .seats__container .seat.premium:hover {
+  -webkit-box-shadow: 0 0 0 9px rgba(5, 41, 95, 0.842), 0 1px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 0 9px rgba(5, 41, 95, 0.842), 0 1px rgba(0, 0, 0, 0.8);
+}
+
+.container .seats__container .seat.premium.selected {
+  -webkit-box-shadow: 0 0 0 9px rgba(4, 29, 66, 0.842), 0 1px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 0 9px rgba(4, 29, 66, 0.842), 0 1px rgba(0, 0, 0, 0.8);
+}
+
+.container .seats__container .seat.premium.blocked {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: none;
+  -webkit-box-shadow: 0 0 0 9px rgba(4, 29, 66, 0.842), 0 1px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 0 9px rgba(4, 29, 66, 0.842), 0 1px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(75deg, #13444b, rgba(9, 37, 80, 0.842));
+}
+
+.container .seats__container .seat.blocked {
+  background: linear-gradient(75deg, #f10b0b, #c40e0e);
+  -webkit-box-shadow: 0 0 0 9px #b80b0b, 0 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 9px #b80b0b, 0 1px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  color: #f3f3f3;
+}
+
+.container .seats__container .seat + .seat {
+  margin-top: 1.5rem;
+}
+
+.container .seat__map {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .seat__map > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .seat__map > div li i {
+  margin-right: 0.3rem;
+}
+
+.container .cart {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .cart > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+}
+
+.container .cart > div #total {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.container .cart > div:last-of-type {
+  margin-top: 1rem;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #333;
+}
+
+.container .cart > div:last-of-type #seat__no {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.container .cart > div:last-of-type #seat__no .seat__no {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: right;
+}
+/*# sourceMappingURL=style.css.map */
