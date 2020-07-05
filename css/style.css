@@ -34,7 +34,6 @@ ul {
 .container h3 {
   text-align: center;
   margin-bottom: 0.4rem;
-  margin-left: 2rem;
 }
 
 .container .seats__container {
@@ -193,7 +192,7 @@ ul {
 }
 
 .container .seat__map {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,7 +223,7 @@ ul {
 }
 
 .container .cart {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,5 +269,13 @@ ul {
   font-size: 1.2rem;
   font-style: italic;
   text-align: right;
+}
+
+@media (max-width: 768px) {
+  .container .seats__container .seat,
+  .container .seats__container .row__no {
+    height: 25px;
+    width: 25px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
